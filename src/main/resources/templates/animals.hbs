@@ -1,0 +1,28 @@
+{{#partial "content"}}
+<div class="row is-flex">
+    <div class="col-md-6">
+        {{#if endangered}}
+            <h3>Endangered Animals</h3>
+            {{#each animal}}
+        <div class="col-md-6">
+            <div class="card">
+                <div class="container">
+                    <h3>Animal: {{name}} </h3>
+                    <p>Health: {{healthLevel}}</p>
+                    <p>Age: {{age}}</p>
+                    <p>Id: {{ id }}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+        {{else}}
+            <p>THIS IS THE ELSE</p>
+
+        {{/if}}
+
+    </div>
+</div>
+{{/partial}}
+
+{{> layout.hbs}}
