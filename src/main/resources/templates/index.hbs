@@ -1,0 +1,17 @@
+{{#partial "content"}}
+    {{#if rangerName}}
+    <h2>Hello, {{rangerName}}!</h2>
+    <h3>Recent Sightings</h3>
+    <h5>No recent sightings!</h5>
+    {{else}}
+    <h2>Hello, please log in before continuing</h2>
+    <form action="/" method="post">
+        <div class="form-group">
+            <label for="rangerName">Enter Ranger Name:</label>
+            <input type="text" name="rangerName" class="form-control" required>
+        </div>
+        <button type="submit" name="button" class="btn btn-success">Log in</button>
+    </form>
+    {{/if}}
+{{/partial}}
+{{> layout.hbs}}
