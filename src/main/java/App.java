@@ -73,7 +73,26 @@ public class App {
             return new ModelAndView(model,"animals.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/sightings", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            List<Sighting> sightings=Sighting.all();
+            model.put("sight",sightings);
+            return new ModelAndView(model, "sightings.hbs");
+        }, new HandlebarsTemplateEngine());
 
+        get("/sightings-form", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "sightings-form.hbs");
+        }, new HandlebarsTemplateEngine());
 
+        post("/sightings", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String rangerName =request.queryParams("rangerName");
+            String location = request.queryParams("location");
+            int animalid = Integer.parseInt(request.queryParams("animalid"));
+            Sighting sightings = new Sighting(rangerName, location, animalid);
+            sightings.save();
+            return new ModelAndView(model,"sightings.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }

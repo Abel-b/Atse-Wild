@@ -8,13 +8,13 @@ import java.util.Objects;
 public class Sighting {
     private String rangerName;
     private String location;
-    private int animalId;
+    private int animalid;
     private int id;
 
-    public Sighting(String rangerName, String location) {
+    public Sighting(String rangerName, String location, int animalid) {
         this.rangerName = rangerName;
         this.location = location;
-        this.animalId = animalId;
+        this.animalid = animalid;
     }
 
     public String getRangerName() {
@@ -29,12 +29,17 @@ public class Sighting {
         return id;
     }
 
+    public int getAnimalid() {
+        return animalid;
+    }
+
+
     public void save() {
         try(Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO sightings (rangerName, animalid, location) VALUES (:rangerName, :animalId, :location)";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("rangerName", this.rangerName)
-                    .addParameter("animalId", this.animalId)
+                    .addParameter("animalid", this.animalid)
                     .addParameter("location", this.location)
                     .executeUpdate()
                     .getKey();

@@ -1,0 +1,15 @@
+{{#partial "content"}}
+<h3>Sightings</h3>
+<div class="sightings">
+    {{#each sight}}
+    <div class="sighting card">
+        <p>Ranger: {{id}}) {{rangerName}}</p>
+        <p>Location: {{location}}</p>
+        <p>Animal-Id: {{animalid}}</p>
+        <hr>
+    </div>
+    {{/each}}
+</div>
+{{/partial}}
+
+{{> layout.hbs}}

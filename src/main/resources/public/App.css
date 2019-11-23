@@ -5,13 +5,13 @@
     background-color: green;
 }
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0);
+  box-shadow: 0 4px 8px 0 darkgreen;
   transition: 0.3s;
   width: 60%;
-  color: green;
+  color: #B22222;
 }
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+  box-shadow: 0 8px 16px 0 lightskyblue;
 }
 
 .container {
