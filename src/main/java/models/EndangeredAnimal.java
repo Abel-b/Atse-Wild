@@ -12,8 +12,8 @@ public class EndangeredAnimal extends Animal {
 
     public EndangeredAnimal(String name, int age, int healthLevel) {
         this.name = name;
-        this.healthLevel = healthLevel;
-        this.age = age;
+        this.healthLevel = HEALTH_STATUS;
+        this.age = AGE_RANGE;
         endangered = true;
     }
 
@@ -38,7 +38,7 @@ public class EndangeredAnimal extends Animal {
     }
 
     public static List<EndangeredAnimal> all(){
-        String sql = "SELECT * FROM animals;";
+        String sql = "SELECT * FROM animals WHERE endangered = 'true';";
         try(Connection con = DB.sql2o.open()){
             return con.createQuery(sql).executeAndFetch(EndangeredAnimal.class);
         }

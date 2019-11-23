@@ -11,7 +11,7 @@ public class WildAnimal extends Animal {
         endangered = false;
     }
 
-    public static List<WildAnimal> all(){
+    public static List<WildAnimal> allWild(){
         String sql = "SELECT * FROM animals WHERE endangered = 'false';";
         try(Connection con = DB.sql2o.open()){
             return con.createQuery(sql)

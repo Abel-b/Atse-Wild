@@ -19,6 +19,10 @@ public abstract class Animal {
         return id;
     }
 
+    public boolean isEndangered(){
+        return endangered;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
