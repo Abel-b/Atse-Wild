@@ -1,8 +1,12 @@
+{{#partial "navbar"}}
+{{/partial}}
+
 {{#partial "content"}}
     {{#if rangerName}}
     <h2>Hello, {{rangerName}}!</h2>
-    <h3>Recent Sightings</h3>
-    <h5>No recent sightings!</h5>
+    <a href="/animals">Animals List</a>
+    <a href="/Aform">Add Animal</a>
+    <a href="/sightings-form">Add Sighting</a>
     {{else}}
     <h2>Hello, please log in before continuing</h2>
     <form action="/" method="post">

@@ -8,7 +8,6 @@
     </head>
     <body>
     <header>
-        <hr class="nav-hr">
         <nav class="navbar navbar-inverse navbar-custom">
             <div class="row">
                 <div class="col-md-2">
@@ -16,16 +15,16 @@
                 </div>
                 <div class="links col-md-10">
                     <h1 style="color: white;">Welcome to Atse Wild Life Tracker.</h1>
-                    <a href="/">Home</a>
+                    <a href="/">Log in</a>
+        {{#block "navbar"}}
                     <a href="/animals">Animals List</a>
                     <a href="/Aform">Add Animal</a>
-
-                    <a href="/sightings-form">Add Animal</a>
-
-
-                </div>
+                    <a href="/sightings-form">Add Sighting</a>
+                    <a href="/sightings">Sightings List</a>
+        </div>
             </div>
         </nav>
+        {{/block}}
     </header>
 {{/block}}
 

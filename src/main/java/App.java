@@ -92,7 +92,16 @@ public class App {
             int animalid = Integer.parseInt(request.queryParams("animalid"));
             Sighting sightings = new Sighting(rangerName, location, animalid);
             sightings.save();
-            return new ModelAndView(model,"sightings.hbs");
+            response.redirect("/sightings");
+            return null;
+//            return new ModelAndView(model,"sightings.hbs");
         }, new HandlebarsTemplateEngine());
-    }
+
+//        get("/sightings", (request, response) -> {
+//            Map<String, Object> model = new HashMap<>();
+//            List<Sighting> sightings=Sighting.all();
+//            model.put("sight",sightings);
+//            return new ModelAndView(model, "sightings.hbs");
+//        }, new HandlebarsTemplateEngine());
+        }
 }

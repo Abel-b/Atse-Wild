@@ -17,6 +17,18 @@
 .container {
   padding: 2px 16px;
 }
+a:link, a:visited {
+  background-color: lightskyblue;
+  color: darkgreen;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
 body {
     background-color: rgb(210,180,140);
 }
