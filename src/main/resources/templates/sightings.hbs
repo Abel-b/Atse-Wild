@@ -1,6 +1,7 @@
 {{#partial "content"}}
 <h3>Sightings</h3>
-<div class="sightings">
+<div class="sightings row">
+    <div class="col-md-5">
     {{#each sight}}
     <div class="sighting card">
         <p>Ranger: {{id}}) {{rangerName}}</p>
@@ -10,6 +11,39 @@
     </div>
     {{/each}}
 </div>
+    <div class="col-md-7">
+        <h3>Animal List</h3>
+
+    <table style="width: 70%" class="card">
+        <tr>
+        <th>Name</th>
+        <th>Health</th>
+        <th>Age</th>
+        <th>Animal Id</th>
+        </tr>
+
+{{#each Eanimal}}
+        <tr>
+        <td>{{name}}</td>
+        <td>{{health}}</td>
+        <td>{{age}}</td>
+        <td>{{id}}</td>
+        </tr>
+{{/each}}
+{{#each Wanimal}}
+        <tr>
+            <td>{{name}}</td>
+            <td>~~</td>
+            <td>~~</td>
+            <td>{{id}}</td>
+        </tr>
+{{/each}}
+    </table>
+
+
+</div>
+</div>
+
 {{/partial}}
 
 {{> layout.hbs}}

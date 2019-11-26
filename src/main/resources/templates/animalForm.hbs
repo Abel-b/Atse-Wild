@@ -1,21 +1,23 @@
 {{#partial "content"}}
 <h3>Add Animal</h3>
 <form action="/animals" method="post">
+    <div class="container">
     <div class="form-group">
         <label for="name">Name the animal: </label>
-        <input type="text" name="Aname" class="form-control" required>
+        <input type="text" name="Aname" class="form-control " required>
     </div>
     <input type="checkbox" name="endangered" value="yes">
     <label for="species">Check here IF Endangered</label>
     <div class="form-health">
         <label for="health">Health (in a scale of 1-10)</label>
-        <input type="number" name="health" min="1" max="10">
+        <input type="number" name="health" min="1" max="10" required>
     </div>
     <div class="form-age">
         <label for="age">Age (in a scale of 1-10)</label>
-        <input type="number" name="age" min="1" max="10">
+        <input type="number" name="age" min="1" max="10" required>
     </div>
     <button type="submit" name="button" class="btn btn-success">Add Animal</button>
+    </div>
 </form>
 {{/partial}}
 {{> layout.hbs}}

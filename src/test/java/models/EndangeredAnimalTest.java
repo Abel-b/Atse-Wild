@@ -18,15 +18,8 @@ public class EndangeredAnimalTest {
     public void EndangeredAnimal_testIfScaleExceptionOfHealthIsCorrect_fail(){
         EndangeredAnimal endangeredAnimal = new EndangeredAnimal("Black Lion", 20, 20);
         endangeredAnimal.setHealthLevel(11);
-        assertEquals(11, endangeredAnimal.getHealthLevel());
+        assertEquals(11, endangeredAnimal.getHealth());
     }
 
 
-//    @Before
-//    public void setUp() throws Exception {
-//    }
-//
-//    @After
-//    public void tearDown() throws Exception {
-//    }
 }
