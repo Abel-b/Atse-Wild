@@ -1,0 +1,1 @@
+web: ./build/install/Atse-Wild/bin/Atse-Wild
