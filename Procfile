@@ -1,1 +1,1 @@
-web: ./build/install/Atse-Wild/bin/Atse-Wild
+web: ./build/install/atse-wild/bin/atse-wild

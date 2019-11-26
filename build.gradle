@@ -21,6 +21,6 @@ dependencies {
     compile "com.sparkjava:spark-core:2.6.0"
     compile "com.sparkjava:spark-template-handlebars:2.5.5"
 }
-applicationName = "Atse-Wild"
+applicationName = "atse-ild"
 mainClassName = 'App'
 task stage(dependsOn: ['clean', 'installDist'])
