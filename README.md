@@ -30,7 +30,7 @@ This is application that allows Rangers to track wildlife sightings in the area.
 *``` CREATE TABLE sightings( id serial PRIMARY KEY,rangerName varchar, location varchar, animalid int)```
 
 ### Contact
-Github [vicky_teka](https://github.com/Abel-b)
+Github [Abel-b](https://github.com/Abel-b)
 
 ### LICENSE
 MIT License [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
